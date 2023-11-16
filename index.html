@@ -93,8 +93,7 @@
         </div>
      </div>
      
-     <script>
-   
+<script>
    const form = document.querySelector('.loan-form');
 
    loadEventListener();
@@ -139,7 +138,7 @@
     else{
        
 
-      showError();
+     
       function showError(error){
 
         document.getElementById('result').style.display = 'none'
@@ -150,26 +149,20 @@
         const heading = document.querySelector('.heading')
 
         errorDiv.className = 'alert alert-danger';
-        errorDiv.appendChild(document.createTextNode('error'));
+        errorDiv.appendChild(document.createTextNode(error));
 
         card.insertBefore(errorDiv, heading);
 
         setTimeout(clearErr, 3000)
 
       }
+      showError('fill the the input');
       function clearErr(){
         document.querySelector('.alert').remove()
       }
     }
-
-
    }
-
-
-
-
-
-        </script>
+</script>
     
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
